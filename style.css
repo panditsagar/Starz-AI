@@ -100,6 +100,24 @@ body {
   z-index: 0;
 }
 
+/* Ambient Tech Grid Overlay */
+.hero-grid-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 980px;
+  background-size: 54px 54px;
+  background-image: 
+    linear-gradient(to right, rgba(16, 185, 129, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(16, 185, 129, 0.08) 1px, transparent 1px);
+  mask-image: radial-gradient(ellipse 70% 55% at 50% 28%, #000000 0%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 55% at 50% 28%, #000000 0%, transparent 80%);
+  pointer-events: none;
+  opacity: 1;
+  z-index: 1;
+}
+
 @keyframes floatSubtle {
   0% {
     transform: translateY(0px);
@@ -181,10 +199,10 @@ body {
 
 .doodle-circle-svg {
   position: absolute;
-  top: -16%;
+  top: -24%;
   left: -8%;
   width: 116%;
-  height: 132%;
+  height: 172%;
   z-index: 1;
   pointer-events: none;
   overflow: visible;
