@@ -166,16 +166,36 @@ body {
   color: var(--text-primary);
 }
 
-.highlight-badge {
-  background: linear-gradient(180deg, #10b981 0%, #059669 100%);
-  color: #ffffff;
- padding: -0px 10px 4px;
-  border-radius: 10px;
+.doodle-highlight {
+  position: relative;
   display: inline-block;
-  line-height: 1.25;
-  margin-top: 2px;
-  margin-left: 2px;
-  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.35);
+  padding: 0 0.2em;
+  white-space: nowrap;
+}
+
+.doodle-highlight .doodle-text {
+  position: relative;
+  z-index: 2;
+  color: var(--text-primary);
+}
+
+.doodle-circle-svg {
+  position: absolute;
+  top: -16%;
+  left: -8%;
+  width: 116%;
+  height: 132%;
+  z-index: 1;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.doodle-circle-svg path {
+  stroke: #10b981;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 2px 8px rgba(16, 185, 129, 0.25));
 }
 
 /* Sub-headline */
@@ -548,6 +568,156 @@ body {
 }
 
 /* ==========================================================================
+   Floating 3D Tech Badges & Animations
+   ========================================================================== */
+.floating-icon-badge {
+  position: absolute;
+  z-index: 50;
+  pointer-events: none;
+  perspective: 800px;
+  opacity: 1;
+}
+
+.float-pill-1 {
+  top: 20px;
+  left: -10px;
+  animation: floatSlow 6.5s ease-in-out infinite alternate;
+}
+
+.float-pill-2 {
+  top: 20px;
+  right: -10px;
+  animation: floatReverse 7s ease-in-out infinite alternate;
+}
+
+.float-pill-3 {
+  top: 250px;
+  left: -10px;
+  animation: floatSlow 7.5s ease-in-out infinite alternate;
+}
+
+.float-pill-4 {
+  top: 250px;
+  right: -10px;
+  animation: floatReverse 6.5s ease-in-out infinite alternate;
+}
+
+.floating-pill-inner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px 8px 10px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 2px solid rgba(167, 243, 208, 0.8);
+  border-radius: 9999px;
+  box-shadow: 
+    0 12px 30px -6px rgba(16, 185, 129, 0.22),
+    0 4px 12px rgba(15, 23, 42, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  transform: rotateX(6deg) rotateY(-6deg) translateZ(10px);
+  transition: transform 0.3s ease;
+}
+
+.floating-pill-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.icon-emerald {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  box-shadow: 0 3px 8px rgba(16, 185, 129, 0.35);
+}
+
+.icon-mint {
+  background: linear-gradient(135deg, #34d399 0%, #059669 100%);
+  box-shadow: 0 3px 8px rgba(52, 211, 153, 0.35);
+}
+
+.icon-whatsapp-green {
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  box-shadow: 0 3px 8px rgba(37, 211, 102, 0.35);
+}
+
+.floating-pill-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.badge-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #065f46;
+  line-height: 1.2;
+}
+
+.badge-sub {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #10b981;
+  line-height: 1.2;
+}
+
+.icon-mint {
+  background: linear-gradient(135deg, #34d399 0%, #059669 100%);
+}
+
+.icon-dark-emerald {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+}
+
+.floating-icon-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.badge-label {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #065f46;
+  line-height: 1.2;
+}
+
+.badge-sub {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #10b981;
+  line-height: 1.2;
+}
+
+@keyframes floatSlow {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(2deg);
+  }
+  100% {
+    transform: translateY(4px) rotate(-1deg);
+  }
+}
+
+@keyframes floatReverse {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(14px) rotate(-2deg);
+  }
+  100% {
+    transform: translateY(-6px) rotate(1deg);
+  }
+}
+
+/* ==========================================================================
    Responsive
    ========================================================================== */
 @media (max-width: 1200px) {
@@ -563,6 +733,9 @@ body {
 }
 
 @media (max-width: 768px) {
+  .floating-icon-badge {
+    display: none;
+  }
   .hero-section {
     padding: 40px 0 70px;
   }
