@@ -242,7 +242,7 @@ body {
    Section 1: Hero Section
    ========================================================================== */
 .hero-section {
-  padding: 30px 0 100px;
+  padding: 30px 0 40px;
   position: relative;
   text-align: center;
 }
@@ -662,9 +662,109 @@ body {
   filter: invert(44%) sepia(96%) saturate(1450%) hue-rotate(125deg) brightness(94%) contrast(98%);
 }
 
-.rating-arrow-right .rating-doodle-arrow {
-  transform: scaleX(-1);
+/* ==========================================================================
+   Section 1: Industry Badges Infinite Marquee Strip
+   ========================================================================== */
+.industry-marquee-wrapper {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  position: relative;
+  z-index: 10;
 }
+
+.marquee-label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+ 
+  letter-spacing: 0.08em;
+  color: (var(--text-primary));
+}
+
+.marquee-container {
+  width: 100%;
+  max-width: 980px;
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent 0%, #000000 8%, #000000 92%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000000 8%, #000000 92%, transparent 100%);
+  padding: 8px 0;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 16px;
+}
+
+.marquee-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  animation: marqueeLoop 24s linear infinite;
+  will-change: transform;
+}
+
+.marquee-container:hover .marquee-group {
+  animation-play-state: paused;
+}
+
+@keyframes marqueeLoop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 18px 8px 10px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: none;
+  border-radius: 9999px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.93rem;
+  font-weight: 700;
+   color: var(--text-secondary);
+  opacity: 0.82;
+  white-space: nowrap;
+  box-shadow: none;
+  transition: opacity 0.2s ease, background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.marquee-pill:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.98);
+  transform: none;
+  box-shadow: none;
+}
+
+.pill-icon-box {
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  border-radius: 50%;
+  background: #ecfdf5;
+   color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+ 
 
 /* ==========================================================================
    Animations
@@ -857,7 +957,7 @@ body {
     display: none;
   }
   .hero-section {
-    padding: 40px 0 70px;
+    padding: 30px 0 25px;
   }
   .hero-brand {
     margin-bottom: 24px;
@@ -926,3 +1026,619 @@ body {
     display: none;
   }
 }
+
+/* ==========================================================================
+   Section 2: Pastel Bento Box Grid (Matched to Reference Image)
+   ========================================================================== */
+.pastel-bento-section {
+  padding: 40px 0 60px;
+  background: var(--bg-base);
+  position: relative;
+  z-index: 2;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section-header {
+  max-width: 700px;
+  margin: 0 auto 50px;
+}
+
+.section-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(1.95rem, 2.9vw, 2.45rem);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.7px;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  font-size: clamp(1rem, 1.8vw, 1.15rem);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Outer Master White Bento Container Frame (Matched to Reference Image) */
+.pastel-bento-frame {
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  border: none;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/* Asymmetric Grid Layout */
+.pastel-bento-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 24px;
+}
+
+/* Bento Card Base Styling */
+.bento-card {
+  border-radius: 16px;
+  padding: 32px 28px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.bento-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px -8px rgba(15, 23, 42, 0.08);
+}
+
+.bento-card-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.bento-card-desc {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #334155;
+  line-height: 1.55;
+}
+
+/* Graphic Illustrations Alignment */
+.bento-graphic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 16px 0;
+  width: 100%;
+}
+
+.bento-graphic svg,
+.bento-img {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  max-height: 140px;
+  object-fit: contain;
+  display: block;
+}
+
+.graphic-chats .bento-img,
+.graphic-posts .bento-img,
+.graphic-crm .bento-img {
+  max-width: 240px;
+  max-height: 185px;
+}
+
+/* Layout Variations (Tall, Wide, Split) */
+.card-tall {
+  grid-row: span 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-tall .bento-card-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.card-tall .bento-graphic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0 24px 0;
+  flex: 1;
+}
+
+.card-tall .bento-graphic svg,
+.card-tall .bento-graphic .bento-img {
+  width: 100%;
+  max-width: 290px;
+  height: auto;
+  max-height: 250px;
+  object-fit: contain;
+}
+
+.card-tall .bento-card-bottom-text {
+  margin-top: auto;
+}
+
+.card-wide-top,
+.card-wide-bottom {
+  grid-column: span 2;
+}
+
+.bento-card-body-horizontal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  height: 100%;
+}
+
+.bento-card-body-horizontal .bento-card-text {
+  flex: 1;
+}
+
+.bento-card-body-horizontal .bento-graphic {
+  flex-shrink: 0;
+  margin: 0;
+  width: 40%;
+  max-width: 240px;
+}
+
+.bento-card-body-horizontal .bento-graphic svg,
+.bento-card-body-horizontal .bento-graphic .bento-img {
+  max-width: 170px;
+  max-height: 130px;
+  object-fit: contain;
+}
+
+/* Specific Override for AI Pages Card */
+.bento-card-body-horizontal .graphic-pages {
+  width: 48%;
+  max-width: 320px;
+}
+
+.bento-card-body-horizontal .graphic-pages .bento-img {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  max-height: 220px;
+  object-fit: contain;
+}
+
+.bento-card-body-horizontal .bento-graphic svg {
+  max-width: 170px;
+  max-height: 130px;
+}
+
+/* Pastel Tint Color Palette (Exact Match to Reference Image) */
+
+/* 1. Soft Lavender/Purple (Left Column) */
+.card-purple {
+  background-color: #f1edfa;
+}
+
+/* 2. Soft Pink/Rose (Top Right Wide) */
+.card-pink {
+  background-color: #fde8ed;
+}
+
+/* 3. Soft Pastel Yellow (Middle Center) */
+.card-yellow {
+  background-color: #fef7da;
+}
+
+/* 4. Soft Sage/Mint Green (Middle Right) */
+.card-sage {
+  background-color: #eef6e8;
+}
+
+/* 5. Soft Peach/Warm Coral (Bottom Left Wide) */
+.card-peach {
+  background-color: #fdede4;
+}
+
+/* 6. Soft Ice Blue (Bottom Middle) */
+.card-blue {
+  background-color: #ebf3f7;
+}
+
+/* 7. Soft Mint Teal (Bottom Right) */
+.card-teal {
+  background-color: #e6f7f2;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .pastel-bento-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .card-tall {
+    grid-row: span 1;
+  }
+  .card-wide-top,
+  .card-wide-bottom {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 680px) {
+  .pastel-bento-frame {
+    padding: 18px;
+    border-radius: 24px;
+  }
+  .pastel-bento-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .card-tall,
+  .card-wide-top,
+  .card-wide-bottom {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  .bento-card-body-horizontal {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .bento-card-title {
+    font-size: 1.35rem;
+  }
+}
+
+/* ==========================================================================
+   Section 3: Measurable Impact (Light Theme Matched to Reference Layout)
+   ========================================================================== */
+.impact-section {
+  padding: 50px 0 100px;
+  background-color: var(--bg-base);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Master Horizontal Card Outer Container */
+.impact-horizontal-card {
+  background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 50%, #f1f5f9 100%);
+  border: none;
+  border-radius: 26px;
+  padding: 46px 44px;
+  box-shadow: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.impact-split-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.impact-text-content {
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.impact-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 18px 36px 18px 38px;
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+  border-radius: 9999px;
+  width: fit-content;
+}
+
+.impact-headline {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(1.95rem, 2.9vw, 2.45rem);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.7px;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.impact-lead-copy {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: clamp(0.98rem, 1.5vw, 1.08rem);
+  color: var(--text-secondary);
+  font-weight: 500;
+  line-height: 1.7;
+  letter-spacing: -0.2px;
+}
+
+/* Right Side: Floating Light Glass Badges Stack */
+.impact-badges-wrapper {
+  position: relative;
+  padding: 15px 10px;
+  min-height: 295px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+
+.badges-grid-bg {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(16, 185, 129, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(16, 185, 129, 0.07) 1px, transparent 1px);
+  mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, #000000 0%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, #000000 0%, transparent 80%);
+  pointer-events: none;
+}
+
+.doodle-spark-wrapper {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* Light Glassmorphism Floating Pill Badge */
+.impact-badge-pill {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 13px 28px;
+  background: rgba(244, 253, 246, 0.94);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: none;
+  border-radius: 9999px;
+  box-shadow: 
+    0 10px 24px -4px rgba(16, 185, 129, 0.14),
+    0 3px 10px rgba(15, 23, 42, 0.03);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+  width: fit-content;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.impact-badge-pill:hover {
+  transform: scale(1.04) translateY(-3px) !important;
+  box-shadow: 
+    0 16px 32px -4px rgba(16, 185, 129, 0.22),
+    0 5px 14px rgba(15, 23, 42, 0.05);
+}
+
+.badge-glow-edge {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 44px;
+  border-radius: 9999px 0 0 9999px;
+  pointer-events: none;
+}
+
+.badge-glow-edge.glow-yellow {
+  background: linear-gradient(90deg, rgba(253, 224, 71, 0.55) 0%, transparent 100%);
+}
+
+.badge-glow-edge.glow-emerald {
+  background: linear-gradient(90deg, rgba(16, 185, 129, 0.45) 0%, transparent 100%);
+}
+
+.badge-pill-text {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.02rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.2px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Staggered Positioning (Matching Reference Image) */
+.pill-pos-1 {
+  align-self: flex-start;
+  margin-left: 50px;
+  transform: rotate(-3deg);
+}
+
+.pill-pos-2 {
+  align-self: flex-end;
+  margin-right: 20px;
+  transform: rotate(2.5deg);
+}
+
+.pill-pos-3 {
+  align-self: flex-start;
+  margin-left: 70px;
+  transform: rotate(-2deg);
+}
+
+.pill-pos-4 {
+  align-self: flex-end;
+  margin-right: 40px;
+  transform: rotate(1.5deg);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 992px) {
+  .impact-split-container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .impact-text-content {
+    max-width: 100%;
+    text-align: center;
+  }
+  .impact-badges-wrapper {
+    align-items: center;
+    min-height: auto;
+  }
+  .pill-pos-1, .pill-pos-2, .pill-pos-3, .pill-pos-4 {
+    align-self: center;
+    margin: 0;
+    transform: none;
+  }
+}
+
+/* ==========================================================================
+   Section 4: Compariso n)
+   ========================================================================== */
+.comparison-wrapper {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+/* Outer Shell Card Base */
+.cmp-card {
+  border-radius: 28px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+/* Left Outer Shell — Soft Grey-to-Rose Pastel Gradient (No Border) */
+.cmp-card-left {
+  background: linear-gradient(135deg, #f2f3f5 0%, #ffe4e6 55%, #fecdd3 100%);
+  border: none;
+}
+
+/* Right Outer Shell — Warm Peach-to-Mint Pastel Gradient (No Border) */
+.cmp-card-right {
+  background: linear-gradient(135deg, #fef3c7 0%, #d1fae5 55%, #bbf7d0 100%);
+  border: none;
+}
+
+/* Outer Header Title (centered) */
+.cmp-card-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+  color: #111827;
+  margin: 14px 0 16px;
+  letter-spacing: -0.02em;
+}
+
+/* Inner White Container Box */
+.cmp-inner-box {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 20px 24px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+}
+
+/* List */
+.cmp-list {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+}
+
+/* Each Row */
+.cmp-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 0;
+}
+
+/* Dotted Divider */
+.cmp-divider {
+  border: none;
+  border-top: 1.5px dotted #d1d5db;
+  margin: 0;
+  width: 100%;
+}
+
+/* Circular Icon Badge */
+.cmp-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  min-width: 26px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.cmp-icon-no {
+  background: #ffe4e6;
+  color: #f43f5e;
+}
+
+.cmp-icon-yes {
+  background: #d1fae5;
+  color: #059669;
+}
+
+/* Item Text */
+.cmp-text {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.96rem;
+  font-weight: 500;
+  line-height: 1.55;
+  color: #374151;
+}
+
+/* CTA */
+.comparison-cta-box {
+  margin-top: 52px;
+  margin-bottom: 80px;
+}
+
+ 
+
+@media (max-width: 768px) {
+  .comparison-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .cmp-card {
+    padding: 12px;
+  }
+  .cmp-inner-box {
+    padding: 16px 18px;
+  }
+  #comparison {
+    padding-bottom: 64px;
+  }
+}
+
+
+

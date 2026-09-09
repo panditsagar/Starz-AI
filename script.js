@@ -108,4 +108,28 @@ document.addEventListener('DOMContentLoaded', () => {
       stopVideo();
     });
   }
+
+  // Interactive Split Showcase Tab Switcher
+  const showcaseTabs = document.querySelectorAll('.showcase-tab');
+  const showcasePanels = document.querySelectorAll('.showcase-panel');
+
+  if (showcaseTabs.length && showcasePanels.length) {
+    showcaseTabs.forEach((tab) => {
+      function activateTab() {
+        const targetId = tab.dataset.tab;
+
+        showcaseTabs.forEach((t) => t.classList.remove('active'));
+        showcasePanels.forEach((p) => p.classList.remove('active'));
+
+        tab.classList.add('active');
+        const targetPanel = document.getElementById(targetId);
+        if (targetPanel) {
+          targetPanel.classList.add('active');
+        }
+      }
+
+      tab.addEventListener('click', activateTab);
+      tab.addEventListener('mouseenter', activateTab);
+    });
+  }
 });
