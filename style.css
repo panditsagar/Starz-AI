@@ -662,6 +662,10 @@ body {
   filter: invert(44%) sepia(96%) saturate(1450%) hue-rotate(125deg) brightness(94%) contrast(98%);
 }
 
+.rating-arrow-right .rating-doodle-arrow {
+  transform: scaleX(-1);
+}
+
 /* ==========================================================================
    Section 1: Industry Badges Infinite Marquee Strip
    ========================================================================== */
