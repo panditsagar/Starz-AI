@@ -6,16 +6,64 @@ document.addEventListener('DOMContentLoaded', () => {
   const vslIframe = document.getElementById('vslIframe');
   const watchVslBtn = document.querySelector('a[href="#vslPlayer"]');
 
-  // Video YouTube URL with autoplay
-  const videoId = "dQw4w9WgXcQ";
-  const autoplayUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&enablejsapi=1`;
-  const defaultUrl = `https://www.youtube.com/embed/${videoId}?enablejsapi=1`;
+  function getYouTubeVideoId(url) {
+    if (!url) {
+      return '';
+    }
+
+    try {
+      const parsedUrl = new URL(url, window.location.href);
+      const hostname = parsedUrl.hostname.replace(/^www\./, '');
+
+      if (hostname === 'youtu.be') {
+        return parsedUrl.pathname.split('/').filter(Boolean)[0] || '';
+      }
+
+      if (hostname === 'youtube.com' || hostname === 'm.youtube.com') {
+        if (parsedUrl.pathname === '/watch') {
+          return parsedUrl.searchParams.get('v') || '';
+        }
+
+        const pathParts = parsedUrl.pathname.split('/').filter(Boolean);
+        if (['embed', 'shorts', 'live'].includes(pathParts[0])) {
+          return pathParts[1] || '';
+        }
+      }
+    } catch (error) {
+      const match = url.match(/(?:v=|youtu\.be\/|embed\/|shorts\/|live\/)([a-zA-Z0-9_-]{11})/);
+      return match ? match[1] : '';
+    }
+
+    return '';
+  }
+
+  function getYouTubeEmbedUrl(videoId, { autoplay = false } = {}) {
+    const params = new URLSearchParams({
+      enablejsapi: '1',
+      rel: '0',
+    });
+
+    if (autoplay) {
+      params.set('autoplay', '1');
+    }
+
+    return `https://www.youtube.com/embed/${videoId}?${params.toString()}`;
+  }
+
+  const videoUrl = vslIframe?.dataset.youtubeUrl || vslIframe?.src || '';
+  const videoId = getYouTubeVideoId(videoUrl);
+  const defaultUrl = videoId ? getYouTubeEmbedUrl(videoId) : '';
+  const autoplayUrl = videoId ? getYouTubeEmbedUrl(videoId, { autoplay: true }) : '';
+
+  if (vslIframe && defaultUrl) {
+    vslIframe.src = defaultUrl;
+  }
 
   function openVideo() {
     if (videoOverlay) {
       videoOverlay.classList.add('active');
     }
-    if (vslIframe) {
+    if (vslIframe && autoplayUrl) {
       vslIframe.src = autoplayUrl;
     }
   }
@@ -24,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (videoOverlay) {
       videoOverlay.classList.remove('active');
     }
-    if (vslIframe) {
+    if (vslIframe && defaultUrl) {
       vslIframe.src = defaultUrl;
     }
   }
