@@ -23,6 +23,35 @@
     <div class="hero-bg-wrapper" aria-hidden="true">
       <div class="hero-single-center-arch"></div>
       <div class="hero-grid-bg"></div>
+
+      <!-- Glassmorphism Floating Pill Badges (Exact match to reference image media_1788932058490.png) -->
+      <!-- Left Pill Badge: Turn more inquiries into revenue -->
+      <div class="hero-pill-badge pill-left">
+        <div class="pill-card-body">
+          <svg class="pill-direct-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="13" width="4.5" height="8" rx="2" fill="#10B981"/>
+            <rect x="9.75" y="8" width="4.5" height="13" rx="2" fill="#10B981"/>
+            <rect x="16.5" y="3" width="4.5" height="18" rx="2" fill="#10B981"/>
+          </svg>
+          <div class="pill-text-wrapper">
+            <span class="pill-text-line">Turn more inquiries</span>
+            <span class="pill-text-line">into revenue</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Pill Badge: Faster conversations. More closed deals. -->
+      <div class="hero-pill-badge pill-right">
+        <div class="pill-card-body">
+          <svg class="pill-direct-icon" width="18" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="#10B981"/>
+          </svg>
+          <div class="pill-text-wrapper">
+            <span class="pill-text-line">Faster conversations.</span>
+            <span class="pill-text-line">More closed deals.</span>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Main Content -->
@@ -30,6 +59,32 @@
       <!-- Section 1: Hero -->
       <section class="hero-section" id="hero">
         <div class="container hero-container">
+          <!-- Full Hero Curved Lines Overlay connecting Pill Badges to CTA Button -->
+          <div class="hero-curved-overlay" aria-hidden="true">
+            <svg class="hero-curves-svg" viewBox="0 0 1080 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Left Curved Line: From Left Pill tip to CTA button -->
+              <path d="M 120 180 C 180 250, 270 285, 360 275" stroke="url(#leftCurveGrad)" stroke-width="2.2" stroke-linecap="round"/>
+              <circle cx="240" cy="245" r="4.5" fill="#10B981"/>
+
+              <!-- Right Curved Line: From Right Pill tip to CTA button -->
+              <path d="M 960 180 C 900 250, 810 285, 720 275" stroke="url(#rightCurveGrad)" stroke-width="2.2" stroke-linecap="round"/>
+              <circle cx="840" cy="245" r="4.5" fill="#10B981"/>
+
+              <defs>
+                <linearGradient id="leftCurveGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#10B981" stop-opacity="1"/>
+                  <stop offset="60%" stop-color="#10B981" stop-opacity="0.5"/>
+                  <stop offset="100%" stop-color="#10B981" stop-opacity="0"/>
+                </linearGradient>
+                <linearGradient id="rightCurveGrad" x1="100%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#10B981" stop-opacity="1"/>
+                  <stop offset="60%" stop-color="#10B981" stop-opacity="0.5"/>
+                  <stop offset="100%" stop-color="#10B981" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+
           <!-- Brand Logo -->
           <div class="hero-brand animate-fade-in">
             <img src="logo.webp" alt="STARZ AI Logo" class="hero-logo-img" />
