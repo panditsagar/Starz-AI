@@ -20,7 +20,9 @@ body.theme-sunset {
   --brand-rgb: 249, 115, 22;
   --brand-dark-rgb: 234, 88, 12;
   --badge-glow-color: rgba(249, 115, 22, 0.45);
-  --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family:
+    "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
 
   /* Sizing & Transitions */
   --container-width: 1080px;
@@ -32,12 +34,20 @@ body.theme-sunset {
 
   --arch-gradient: radial-gradient(
     ellipse 1350px 820px at 50% 12%,
-    #ffffff 0%, #ffffff 32%, #fff7ed 40%, #ffedd5 46%,
-    rgba(255, 237, 213, 0.70) 48%, rgba(254, 215, 170, 0.60) 54%,
-    rgba(254, 215, 170, 0.80) 56%, rgba(253, 186, 116, 0.70) 64%,
-    rgba(253, 186, 116, 0.90) 66%, rgba(251, 146, 60, 0.75) 74%,
-    rgba(251, 146, 60, 0.92) 76%, rgba(249, 115, 22, 0.80) 84%,
-    rgba(249, 115, 22, 0.95) 86%, rgba(234, 88, 12, 0.88) 92%,
+    #ffffff 0%,
+    #ffffff 32%,
+    #fff7ed 40%,
+    #ffedd5 46%,
+    rgba(255, 237, 213, 0.7) 48%,
+    rgba(254, 215, 170, 0.6) 54%,
+    rgba(254, 215, 170, 0.8) 56%,
+    rgba(253, 186, 116, 0.7) 64%,
+    rgba(253, 186, 116, 0.9) 66%,
+    rgba(251, 146, 60, 0.75) 74%,
+    rgba(251, 146, 60, 0.92) 76%,
+    rgba(249, 115, 22, 0.8) 84%,
+    rgba(249, 115, 22, 0.95) 86%,
+    rgba(234, 88, 12, 0.88) 92%,
     #9a3412 100%
   );
 }
@@ -55,12 +65,20 @@ body.theme-blue {
   --badge-glow-color: rgba(59, 130, 246, 0.45);
   --arch-gradient: radial-gradient(
     ellipse 1350px 820px at 50% 12%,
-    #ffffff 0%, #ffffff 32%, #eff6ff 40%, #dbeafe 46%,
-    rgba(219, 234, 254, 0.70) 48%, rgba(191, 219, 254, 0.60) 54%,
-    rgba(191, 219, 254, 0.80) 56%, rgba(147, 197, 253, 0.70) 64%,
-    rgba(147, 197, 253, 0.90) 66%, rgba(96, 165, 250, 0.75) 74%,
-    rgba(96, 165, 250, 0.92) 76%, rgba(59, 130, 246, 0.80) 84%,
-    rgba(59, 130, 246, 0.95) 86%, rgba(37, 99, 235, 0.88) 92%,
+    #ffffff 0%,
+    #ffffff 32%,
+    #eff6ff 40%,
+    #dbeafe 46%,
+    rgba(219, 234, 254, 0.7) 48%,
+    rgba(191, 219, 254, 0.6) 54%,
+    rgba(191, 219, 254, 0.8) 56%,
+    rgba(147, 197, 253, 0.7) 64%,
+    rgba(147, 197, 253, 0.9) 66%,
+    rgba(96, 165, 250, 0.75) 74%,
+    rgba(96, 165, 250, 0.92) 76%,
+    rgba(59, 130, 246, 0.8) 84%,
+    rgba(59, 130, 246, 0.95) 86%,
+    rgba(37, 99, 235, 0.88) 92%,
     #1e40af 100%
   );
 }
@@ -78,12 +96,20 @@ body.theme-emerald {
   --badge-glow-color: rgba(16, 185, 129, 0.45);
   --arch-gradient: radial-gradient(
     ellipse 1350px 820px at 50% 12%,
-    #ffffff 0%, #ffffff 32%, #f0fdf4 40%, #dcfce7 46%,
-    rgba(220, 252, 231, 0.70) 48%, rgba(187, 247, 208, 0.60) 54%,
-    rgba(187, 247, 208, 0.80) 56%, rgba(134, 239, 172, 0.70) 64%,
-    rgba(134, 239, 172, 0.90) 66%, rgba(74, 222, 128, 0.75) 74%,
-    rgba(74, 222, 128, 0.92) 76%, rgba(34, 197, 94, 0.80) 84%,
-    rgba(34, 197, 94, 0.95) 86%, rgba(22, 163, 74, 0.88) 92%,
+    #ffffff 0%,
+    #ffffff 32%,
+    #f0fdf4 40%,
+    #dcfce7 46%,
+    rgba(220, 252, 231, 0.7) 48%,
+    rgba(187, 247, 208, 0.6) 54%,
+    rgba(187, 247, 208, 0.8) 56%,
+    rgba(134, 239, 172, 0.7) 64%,
+    rgba(134, 239, 172, 0.9) 66%,
+    rgba(74, 222, 128, 0.75) 74%,
+    rgba(74, 222, 128, 0.92) 76%,
+    rgba(34, 197, 94, 0.8) 84%,
+    rgba(34, 197, 94, 0.95) 86%,
+    rgba(22, 163, 74, 0.88) 92%,
     #047857 100%
   );
 }
@@ -101,64 +127,28 @@ body.theme-violet {
   --badge-glow-color: rgba(139, 92, 246, 0.45);
   --arch-gradient: radial-gradient(
     ellipse 1350px 820px at 50% 12%,
-    #ffffff 0%, #ffffff 32%, #f5f3ff 40%, #ede9fe 46%,
-    rgba(237, 233, 254, 0.70) 48%, rgba(221, 214, 254, 0.60) 54%,
-    rgba(221, 214, 254, 0.80) 56%, rgba(196, 181, 253, 0.70) 64%,
-    rgba(196, 181, 253, 0.90) 66%, rgba(167, 139, 250, 0.75) 74%,
-    rgba(167, 139, 250, 0.92) 76%, rgba(139, 92, 246, 0.80) 84%,
-    rgba(139, 92, 246, 0.95) 86%, rgba(124, 58, 237, 0.88) 92%,
+    #ffffff 0%,
+    #ffffff 32%,
+    #f5f3ff 40%,
+    #ede9fe 46%,
+    rgba(237, 233, 254, 0.7) 48%,
+    rgba(221, 214, 254, 0.6) 54%,
+    rgba(221, 214, 254, 0.8) 56%,
+    rgba(196, 181, 253, 0.7) 64%,
+    rgba(196, 181, 253, 0.9) 66%,
+    rgba(167, 139, 250, 0.75) 74%,
+    rgba(167, 139, 250, 0.92) 76%,
+    rgba(139, 92, 246, 0.8) 84%,
+    rgba(139, 92, 246, 0.95) 86%,
+    rgba(124, 58, 237, 0.88) 92%,
     #5b21b6 100%
   );
 }
 
-/* Theme Variant 2: Royal Blue & Electric Cyan Theme */
-body.theme-blue {
-  --color-brand: #2563eb;
-  --color-brand-light: #3b82f6;
-  --color-brand-hover: #1d4ed8;
-  --gradient-brand: linear-gradient(180deg, #3b82f6 0%, #2563eb 100%);
-  --text-accent: #2563eb;
-  --color-accent-green: #3b82f6;
-  --brand-rgb: 59, 130, 246;
-  --brand-dark-rgb: 37, 99, 235;
-  --badge-glow-color: rgba(59, 130, 246, 0.45);
-  --arch-gradient: radial-gradient(
-    ellipse 1350px 820px at 50% 12%,
-    #ffffff 0%, #ffffff 32%, #eff6ff 40%, #dbeafe 46%,
-    rgba(219, 234, 254, 0.70) 48%, rgba(191, 219, 254, 0.60) 54%,
-    rgba(191, 219, 254, 0.80) 56%, rgba(147, 197, 253, 0.70) 64%,
-    rgba(147, 197, 253, 0.90) 66%, rgba(96, 165, 250, 0.75) 74%,
-    rgba(96, 165, 250, 0.92) 76%, rgba(59, 130, 246, 0.80) 84%,
-    rgba(59, 130, 246, 0.95) 86%, rgba(37, 99, 235, 0.88) 92%,
-    #1e40af 100%
-  );
-}
-
-/* Theme Variant 3: Sunset Orange & Amber Theme */
-body.theme-sunset {
-  --color-brand: #ea580c;
-  --color-brand-light: #f97316;
-  --color-brand-hover: #c2410c;
-  --gradient-brand: linear-gradient(180deg, #f97316 0%, #ea580c 100%);
-  --text-accent: #ea580c;
-  --color-accent-green: #f97316;
-  --brand-rgb: 249, 115, 22;
-  --brand-dark-rgb: 234, 88, 12;
-  --badge-glow-color: rgba(249, 115, 22, 0.45);
-  --arch-gradient: radial-gradient(
-    ellipse 1350px 820px at 50% 12%,
-    #ffffff 0%, #ffffff 32%, #fff7ed 40%, #ffedd5 46%,
-    rgba(255, 237, 213, 0.70) 48%, rgba(254, 215, 170, 0.60) 54%,
-    rgba(254, 215, 170, 0.80) 56%, rgba(253, 186, 116, 0.70) 64%,
-    rgba(253, 186, 116, 0.90) 66%, rgba(251, 146, 60, 0.75) 74%,
-    rgba(251, 146, 60, 0.92) 76%, rgba(249, 115, 22, 0.80) 84%,
-    rgba(249, 115, 22, 0.95) 86%, rgba(234, 88, 12, 0.88) 92%,
-    #9a3412 100%
-  );
-}
-
 /* Reset & Base Setup */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -202,12 +192,24 @@ body {
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
- 
+
   height: 980px;
   background: var(--arch-gradient);
   filter: blur(14px);
-  mask-image: linear-gradient(to bottom, transparent 0%, #000000 8%, #000000 78%, transparent 98%);
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000000 8%, #000000 78%, transparent 98%);
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    #000000 8%,
+    #000000 78%,
+    transparent 98%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    #000000 8%,
+    #000000 78%,
+    transparent 98%
+  );
   pointer-events: none;
   opacity: 0.85;
   z-index: 0;
@@ -221,11 +223,27 @@ body {
   width: 100%;
   height: 980px;
   background-size: 54px 54px;
-  background-image: 
-    linear-gradient(to right, rgba(var(--brand-rgb), 0.08) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(var(--brand-rgb), 0.08) 1px, transparent 1px);
-  mask-image: radial-gradient(ellipse 70% 55% at 50% 28%, #000000 0%, transparent 80%);
-  -webkit-mask-image: radial-gradient(ellipse 70% 55% at 50% 28%, #000000 0%, transparent 80%);
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(var(--brand-rgb), 0.08) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(var(--brand-rgb), 0.08) 1px,
+      transparent 1px
+    );
+  mask-image: radial-gradient(
+    ellipse 70% 55% at 50% 28%,
+    #000000 0%,
+    transparent 80%
+  );
+  -webkit-mask-image: radial-gradient(
+    ellipse 70% 55% at 50% 28%,
+    #000000 0%,
+    transparent 80%
+  );
   pointer-events: none;
   opacity: 1;
   z-index: 1;
@@ -284,7 +302,7 @@ body {
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.95);
   border-radius: 9999px;
-  box-shadow: 
+  box-shadow:
     0 12px 30px -6px rgba(16, 185, 129, 0.18),
     0 4px 14px rgba(15, 23, 42, 0.04);
 }
@@ -377,7 +395,9 @@ body {
   width: auto;
   object-fit: contain;
   display: block;
-  filter: invert(48%) sepia(85%) saturate(1800%) hue-rotate(350deg) brightness(98%) contrast(96%) drop-shadow(0 4px 14px rgba(249, 115, 22, 0.28));
+  filter: invert(48%) sepia(85%) saturate(1800%) hue-rotate(350deg)
+    brightness(98%) contrast(96%)
+    drop-shadow(0 4px 14px rgba(249, 115, 22, 0.28));
   transition: transform var(--transition-smooth);
 }
 
@@ -387,7 +407,7 @@ body {
 
 /* Main Headline */
 .main-headline {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   margin-top: 1.2rem;
   font-size: 3rem;
   font-weight: 700;
@@ -481,7 +501,7 @@ body {
   border-radius: 28px;
   padding: 10px;
   position: relative;
-  box-shadow: 
+  box-shadow:
     0 20px 50px -10px rgba(var(--brand-rgb), 0.25),
     0 0 30px rgba(var(--brand-dark-rgb), 0.15),
     0 10px 20px -5px rgba(15, 23, 42, 0.06);
@@ -495,7 +515,12 @@ body {
   right: -4px;
   bottom: -4px;
   border-radius: 30px;
-  background: linear-gradient(135deg, rgba(var(--brand-rgb), 0.4), rgba(254, 215, 170, 0.6), rgba(var(--brand-dark-rgb), 0.4));
+  background: linear-gradient(
+    135deg,
+    rgba(var(--brand-rgb), 0.4),
+    rgba(254, 215, 170, 0.6),
+    rgba(var(--brand-dark-rgb), 0.4)
+  );
   z-index: -1;
   opacity: 0.7;
   filter: blur(14px);
@@ -523,7 +548,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
 }
 
@@ -659,7 +684,6 @@ body {
 
 .btn-primary:hover {
   transform: translateY(-2px);
- 
 }
 
 .btn-secondary:hover {
@@ -772,7 +796,8 @@ body {
   width: 52px;
   height: auto;
   display: block;
-  filter: invert(48%) sepia(85%) saturate(1800%) hue-rotate(350deg) brightness(98%) contrast(96%);
+  filter: invert(48%) sepia(85%) saturate(1800%) hue-rotate(350deg)
+    brightness(98%) contrast(96%);
 }
 
 .rating-arrow-right .rating-doodle-arrow {
@@ -794,7 +819,7 @@ body {
 }
 
 .marquee-label {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 0.88rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -808,8 +833,20 @@ body {
   max-width: 980px;
   overflow: hidden;
   position: relative;
-  mask-image: linear-gradient(to right, transparent 0%, #000000 8%, #000000 92%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000000 8%, #000000 92%, transparent 100%);
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000000 8%,
+    #000000 92%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    #000000 8%,
+    #000000 92%,
+    transparent 100%
+  );
   padding: 8px 0;
 }
 
@@ -846,7 +883,7 @@ body {
   -webkit-backdrop-filter: blur(12px);
   border: none;
   border-radius: 9999px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 0.93rem;
   font-weight: 700;
   color: var(--text-secondary);
@@ -868,8 +905,6 @@ body {
   font-size: 0.85rem;
 }
 
- 
-
 /* ==========================================================================
    Animations
    ========================================================================== */
@@ -879,10 +914,18 @@ body {
   animation: fadeIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-.delay-1 { animation-delay: 0.08s; }
-.delay-2 { animation-delay: 0.16s; }
-.delay-3 { animation-delay: 0.24s; }
-.delay-4 { animation-delay: 0.32s; }
+.delay-1 {
+  animation-delay: 0.08s;
+}
+.delay-2 {
+  animation-delay: 0.16s;
+}
+.delay-3 {
+  animation-delay: 0.24s;
+}
+.delay-4 {
+  animation-delay: 0.32s;
+}
 
 @keyframes fadeIn {
   to {
@@ -936,7 +979,7 @@ body {
   -webkit-backdrop-filter: blur(16px);
   border: 2px solid rgba(167, 243, 208, 0.8);
   border-radius: 9999px;
-  box-shadow: 
+  box-shadow:
     0 12px 30px -6px rgba(16, 185, 129, 0.22),
     0 4px 12px rgba(15, 23, 42, 0.05),
     inset 0 1px 0 rgba(255, 255, 255, 0.9);
@@ -1132,6 +1175,226 @@ body {
 }
 
 /* ==========================================================================
+   Section: Problems & Solutions
+   ========================================================================== */
+.prob-sol-section {
+  padding: 60px 0 70px;
+  background: var(--bg-base);
+  position: relative;
+  z-index: 2;
+}
+
+.prob-intro {
+  margin-bottom: 36px;
+}
+
+.prob-meanwhile {
+  font-weight: 700;
+  color: var(--color-brand);
+}
+
+/* Problem Grid (6 cards) */
+/* ==========================================================================
+   Section: Problems & Solutions (Option 1: Transformation Cards)
+   ========================================================================== */
+.prob-sol-section {
+  padding: 60px 0 80px;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #faf8f5 35%,
+    #faf8f5 75%,
+    #ffffff 100%
+  );
+  position: relative;
+  z-index: 2;
+}
+
+.text-brand {
+  color: var(--color-brand);
+}
+
+.transform-subtitle {
+  max-width: 680px;
+  margin: 0 auto 40px;
+  line-height: 1.65;
+}
+
+.transform-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 45px;
+}
+
+.transform-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 26px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  border: none;
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.transform-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Friction Part */
+.card-friction-part {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.friction-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.friction-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 6px;
+  background: #fef2f2;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.icon-wa {
+  color: #16a34a;
+  background: #dcfce7;
+}
+.icon-quote {
+  color: #d97706;
+  background: #fef3c7;
+}
+.icon-ig {
+  color: #db2777;
+  background: #fce7f3;
+}
+.icon-google {
+  color: #0284c7;
+  background: #e0f2fe;
+}
+.icon-ads {
+  color: #ea580c;
+  background: #ffedd5;
+}
+.icon-chaos {
+  color: #ef4444;
+  background: #fee2e2;
+}
+
+.friction-label {
+  font-family: var(--font-family);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #64748b;
+}
+
+.friction-text {
+  font-family: var(--font-family);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1e293b;
+  line-height: 1.5;
+}
+
+.friction-highlight {
+  color: #b91c1c;
+  font-weight: 700;
+}
+
+/* Arrow Bridge Chip */
+.card-arrow-bridge {
+  display: flex;
+  align-items: center;
+}
+
+.bridge-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 14px;
+  border-radius: 9999px;
+  background: #ffedd5;
+  font-family: var(--font-family);
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--color-brand);
+  border: none;
+}
+
+.bridge-chip i {
+  font-size: 0.68rem;
+}
+
+/* Fix Part (Fresh Solution Mint) */
+.card-fix-part {
+  background: #f0fdf4;
+  border-radius: 10px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border: none;
+}
+
+.fix-title {
+  font-family: var(--font-family);
+  font-size: 1.08rem;
+  font-weight: 800;
+  color: #15803d;
+  letter-spacing: -0.01em;
+}
+
+.fix-desc {
+  font-family: var(--font-family);
+  font-size: 0.9rem;
+  color: #166534;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* Section CTA */
+.prob-sol-cta {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* Responsive Rules */
+@media (max-width: 992px) {
+  .transform-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .transform-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .transform-card {
+    padding: 20px 18px;
+  }
+}
+
+/* ==========================================================================
    Section 2: Pastel Bento Box Grid (Matched to Reference Image)
    ========================================================================== */
 .pastel-bento-section {
@@ -1151,7 +1414,7 @@ body {
 }
 
 .section-title {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   font-size: clamp(1.95rem, 2.9vw, 2.45rem);
   font-weight: 700;
   line-height: 1.25;
@@ -1194,7 +1457,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
 .bento-card:hover {
@@ -1203,7 +1468,7 @@ body {
 }
 
 .bento-card-title {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 1.6rem;
   font-weight: 800;
   letter-spacing: -0.5px;
@@ -1452,7 +1717,7 @@ body {
 }
 
 .impact-headline {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   font-size: clamp(1.95rem, 2.9vw, 2.45rem);
   font-weight: 700;
   line-height: 1.25;
@@ -1462,7 +1727,7 @@ body {
 }
 
 .impact-lead-copy {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   font-size: clamp(0.98rem, 1.5vw, 1.08rem);
   color: var(--text-secondary);
   font-weight: 500;
@@ -1488,11 +1753,27 @@ body {
   right: -20px;
   bottom: -20px;
   background-size: 40px 40px;
-  background-image: 
-    linear-gradient(to right, rgba(var(--brand-rgb), 0.07) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(var(--brand-rgb), 0.07) 1px, transparent 1px);
-  mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, #000000 0%, transparent 80%);
-  -webkit-mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, #000000 0%, transparent 80%);
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(var(--brand-rgb), 0.07) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(var(--brand-rgb), 0.07) 1px,
+      transparent 1px
+    );
+  mask-image: radial-gradient(
+    ellipse 70% 70% at 50% 50%,
+    #000000 0%,
+    transparent 80%
+  );
+  -webkit-mask-image: radial-gradient(
+    ellipse 70% 70% at 50% 50%,
+    #000000 0%,
+    transparent 80%
+  );
   pointer-events: none;
 }
 
@@ -1515,10 +1796,12 @@ body {
   -webkit-backdrop-filter: blur(20px);
   border: none;
   border-radius: 9999px;
-  box-shadow: 
+  box-shadow:
     0 10px 24px -4px rgba(var(--brand-rgb), 0.14),
     0 3px 10px rgba(15, 23, 42, 0.03);
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+  transition:
+    transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.35s ease;
   width: fit-content;
   overflow: hidden;
   z-index: 2;
@@ -1526,7 +1809,7 @@ body {
 
 .impact-badge-pill:hover {
   transform: scale(1.04) translateY(-3px) !important;
-  box-shadow: 
+  box-shadow:
     0 16px 32px -4px rgba(var(--brand-rgb), 0.22),
     0 5px 14px rgba(15, 23, 42, 0.05);
 }
@@ -1542,16 +1825,24 @@ body {
 }
 
 .badge-glow-edge.glow-yellow {
-  background: linear-gradient(90deg, rgba(253, 224, 71, 0.55) 0%, transparent 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(253, 224, 71, 0.55) 0%,
+    transparent 100%
+  );
 }
 
 .badge-glow-edge.glow-emerald,
 .badge-glow-edge.glow-blue {
-  background: linear-gradient(90deg, rgba(59, 130, 246, 0.45) 0%, transparent 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(59, 130, 246, 0.45) 0%,
+    transparent 100%
+  );
 }
 
 .badge-pill-text {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 1.02rem;
   font-weight: 800;
   color: #0f172a;
@@ -1599,7 +1890,10 @@ body {
     align-items: center;
     min-height: auto;
   }
-  .pill-pos-1, .pill-pos-2, .pill-pos-3, .pill-pos-4 {
+  .pill-pos-1,
+  .pill-pos-2,
+  .pill-pos-3,
+  .pill-pos-4 {
     align-self: center;
     margin: 0;
     transform: none;
@@ -1644,7 +1938,7 @@ body {
 
 /* Outer Header Title (centered) */
 .cmp-card-title {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
   text-align: center;
@@ -1714,7 +2008,7 @@ body {
 
 /* Item Text */
 .cmp-text {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 0.96rem;
   font-weight: 500;
   line-height: 1.55;
@@ -1726,8 +2020,6 @@ body {
   margin-top: 52px;
   margin-bottom: 80px;
 }
-
- 
 
 @media (max-width: 768px) {
   .comparison-grid {
@@ -1744,9 +2036,3 @@ body {
     padding-bottom: 64px;
   }
 }
-
-
-
-
-
-
