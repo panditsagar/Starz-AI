@@ -702,10 +702,7 @@ body {
 
 .btn-primary:active {
   transform: translateY(1px);
-  box-shadow:
-    inset 0 1px 1px 0 rgba(255, 255, 255, 0.35),
-    inset 0 -1.5px 0 0 #3e229a,
-    0 6px 16px -2px rgba(98, 54, 245, 0.4);
+  
 }
 
 .btn-secondary:active {
@@ -1174,16 +1171,7 @@ body {
   }
 }
 
-/* ==========================================================================
-   Section: Problems & Solutions
-   ========================================================================== */
-.prob-sol-section {
-  padding: 60px 0 70px;
-  background: var(--bg-base);
-  position: relative;
-  z-index: 2;
-}
-
+ 
 .prob-intro {
   margin-bottom: 36px;
 }
@@ -1198,7 +1186,7 @@ body {
    Section: Problems & Solutions (Option 1: Transformation Cards)
    ========================================================================== */
 .prob-sol-section {
-  padding: 60px 0 80px;
+  padding: 20px 0 20px;
   background: linear-gradient(
     180deg,
     #ffffff 0%,
@@ -2036,3 +2024,182 @@ body {
     padding-bottom: 64px;
   }
 }
+
+/* ==========================================================================
+   Section: Frequently Asked Questions (FAQ)
+   ========================================================================== */
+.faq-section {
+  padding: 0px 0 100px;
+  background-color: var(--bg-base);
+  position: relative;
+  z-index: 2;
+}
+
+.faq-accordion-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-item {
+  background: #ffffff;
+  border: 1.5px solid #eef0f4;
+  border-radius: 10px;
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background-color var(--transition-fast);
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.faq-item:hover {
+  border-color: rgba(var(--brand-rgb), 0.35);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+}
+
+.faq-item.active {
+  border-color: rgba(var(--brand-rgb), 0.45);
+  box-shadow: 0 8px 24px rgba(var(--brand-rgb), 0.08);
+}
+
+.faq-question {
+  width: 100%;
+  padding: 22px 28px;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-family);
+  font-size: 1.06rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.015em;
+  line-height: 1.42;
+  transition: color var(--transition-fast);
+}
+
+.faq-question-text {
+  flex: 1;
+}
+
+.faq-item.active .faq-question {
+  color: var(--color-brand);
+}
+
+.faq-icon-wrapper {
+  width: 34px;
+  height: 34px;
+  min-width: 34px;
+  border-radius: 50%;
+  background: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  transition:
+    transform 0.32s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.faq-item:hover .faq-icon-wrapper {
+  background: #ffedd5;
+  color: var(--color-brand);
+}
+
+.faq-item.active .faq-icon-wrapper {
+  background: var(--gradient-brand);
+  color: #ffffff;
+  transform: rotate(180deg);
+}
+
+.faq-answer-collapse {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.faq-item.active .faq-answer-collapse {
+  grid-template-rows: 1fr;
+}
+
+.faq-answer-inner {
+  overflow: hidden;
+}
+
+.faq-answer-inner p {
+  padding: 0 28px 24px;
+  font-family: var(--font-family);
+  font-size: 0.98rem;
+  line-height: 1.68;
+  color: var(--text-secondary);
+  font-weight: 450;
+}
+
+/* FAQ Bottom CTA Card */
+.faq-bottom-card {
+  max-width: 1000px;
+  margin: 48px auto 0;
+  background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 60%, #fed7aa 100%);
+  border-radius: 12px;
+  padding: 28px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  box-shadow: 0 4px 20px rgba(var(--brand-dark-rgb), 0.06);
+}
+
+.faq-bottom-title {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 1.22rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+  letter-spacing: -0.02em;
+}
+
+.faq-bottom-desc {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.96rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.faq-bottom-card .btn {
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 60px 0 80px;
+  }
+  .faq-question {
+    padding: 18px 20px;
+    font-size: 0.98rem;
+    gap: 12px;
+  }
+  .faq-answer-inner p {
+    padding: 0 20px 20px;
+    font-size: 0.93rem;
+  }
+  .faq-bottom-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 26px 22px;
+    gap: 18px;
+  }
+  .faq-bottom-card .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+

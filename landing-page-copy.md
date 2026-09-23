@@ -120,3 +120,34 @@ One connected system keeps every lead moving.
 **Primary CTA:**
 
 **Book Free 1-on-1 Strategy Call →**
+
+---
+
+## Section 5: Frequently Asked Questions
+
+**Headline:**
+
+# Frequently Asked Questions
+
+**Subheadline:**
+
+Got questions? Here is everything you need to know about how STARZ AI helps your business grow.
+
+**Do I need to understand AI or technology to use STARZ?**
+No. STARZ is built for business owners, not tech experts. The goal is to make marketing, follow-up and customer management simpler.
+
+**Is STARZ only a CRM?**
+No. STARZ combines marketing, customer conversations, follow-ups and CRM in one connected platform.
+
+**Can STARZ help me get more customers?**
+STARZ helps your business get discovered, generate enquiries, respond faster and follow up more consistently.
+
+**What if I don’t run ads or use social media right now?**
+That’s completely fine. STARZ is designed to support different parts of business growth, whether you’re already doing online marketing or just getting started.
+
+**Will STARZ work when my business is closed?**
+Yes. Its AI-powered tools can continue handling certain customer interactions and follow-ups 24/7.
+
+**Is STARZ suitable for a small business like mine?**
+Yes. It is especially useful for small businesses that want to grow without managing multiple complicated tools or depending on everything being done manually.
+
