@@ -1210,8 +1210,9 @@ body {
     justify-content: center;
     padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
     background: rgba(255, 255, 255, 0.92);
-    border-top: 1px solid rgba(var(--brand-rgb), 0.16);
-    box-shadow: 0 -12px 28px rgba(15, 23, 42, 0.08);
+     box-shadow: 0 -12px 28px rgba(15, 23, 42, 0.08);
+     border-top-right-radius: 20px;
+     border-top-left-radius: 20px;
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
   }
@@ -1291,7 +1292,7 @@ body {
     padding-inline: 14px;
   }
   .main-headline {
-    font-size: clamp(1.62rem, 8.2vw, 1.98rem);
+    font-size: 1.8rem;
   }
   .doodle-highlight {
     padding-inline: 0.12em;
@@ -1556,7 +1557,7 @@ body {
     margin-bottom: 28px;
   }
   .prob-sol-section .section-title {
-    font-size: clamp(1.72rem, 7vw, 2.08rem);
+    font-size: 1.55rem;
     line-height: 1.18;
     letter-spacing: 0;
   }
@@ -1581,7 +1582,7 @@ body {
     padding: 20px 18px;
     gap: 14px;
     border-radius: 14px;
-    box-shadow: 0 10px 26px rgba(15, 23, 42, 0.06);
+    box-shadow: 0 10px 26px rgba(15, 23, 42, 0.04);
   }
   .card-friction-part {
     gap: 10px;
@@ -1629,7 +1630,7 @@ body {
     padding-inline: 14px;
   }
   .prob-sol-section .section-title {
-    font-size: clamp(1.52rem, 8vw, 1.86rem);
+    font-size: 1.6rem;
   }
   .transform-subtitle {
     font-size: 0.9rem;
@@ -1679,7 +1680,7 @@ body {
 
 .section-title {
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: clamp(1.95rem, 2.9vw, 2.45rem);
+  font-size: 2.25rem;
   font-weight: 700;
   line-height: 1.25;
   letter-spacing: -0.7px;
@@ -1935,7 +1936,7 @@ body {
     margin-bottom: 28px;
   }
   .pastel-bento-section .section-title {
-    font-size: clamp(1.72rem, 7vw, 2.08rem);
+    font-size: 1.55rem;
     line-height: 1.18;
     letter-spacing: 0;
   }
@@ -2294,7 +2295,7 @@ body {
     margin-bottom: 28px;
   }
   .impact-section .section-title {
-    font-size: clamp(1.72rem, 7vw, 2.08rem);
+    font-size: 1.55rem;
     line-height: 1.18;
     letter-spacing: 0;
   }
@@ -2353,7 +2354,7 @@ body {
     border-radius: 16px;
   }
   .impact-section .section-title {
-    font-size: clamp(1.52rem, 8vw, 1.86rem);
+    font-size: 1.5rem;
   }
   .impact-lead-copy {
     font-size: 0.88rem;
@@ -2505,7 +2506,7 @@ body {
     margin-bottom: 30px;
   }
   #comparison .section-title {
-    font-size: clamp(1.32rem, 5.2vw, 1.58rem);
+    font-size: 1.55rem;
     line-height: 1.18;
     letter-spacing: 0;
   }
@@ -2577,7 +2578,7 @@ body {
     padding-inline: 14px;
   }
   #comparison .section-title {
-    font-size:  1.5rem;
+    font-size: 1.5rem;
   }
   .comparison-wrapper {
     max-width: 340px;
@@ -2783,7 +2784,7 @@ body {
     margin-bottom: 28px;
   }
   .faq-section .section-title {
-    font-size: clamp(1.72rem, 7vw, 2.08rem);
+    font-size: 1.55rem;
     line-height: 1.18;
     letter-spacing: 0;
   }
@@ -2837,7 +2838,7 @@ body {
     padding-inline: 14px;
   }
   .faq-section .section-title {
-    font-size: clamp(1.52rem, 8vw, 1.86rem);
+    font-size: 1.5rem;
   }
   .faq-section .section-subtitle {
     font-size: 0.9rem;
