@@ -709,6 +709,19 @@ body {
   transform: translateY(1px);
 }
 
+/* Mobile Sticky CTA Footer */
+.mobile-sticky-footer {
+  display: none;
+}
+
+.mobile-sticky-cta {
+  min-height: 56px;
+  width: 100%;
+  padding: 14px 22px;
+  font-size: 0.98rem;
+  line-height: 1.2;
+}
+
 /* ==========================================================================
    Social Proof Rating & Avatars (Matched to Reference Image)
    ========================================================================== */
@@ -1097,6 +1110,9 @@ body {
 }
 
 @media (max-width: 768px) {
+  body {
+    padding-bottom: calc(96px + env(safe-area-inset-bottom));
+  }
   .floating-icon-badge {
     display: none;
   }
@@ -1145,6 +1161,26 @@ body {
     max-width: 100%;
     padding: 12px 18px;
     font-size: 0.88rem;
+    white-space: normal;
+    text-align: center;
+  }
+  .mobile-sticky-footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+    background: rgba(255, 255, 255, 0.92);
+    border-top: 1px solid rgba(var(--brand-rgb), 0.16);
+    box-shadow: 0 -12px 28px rgba(15, 23, 42, 0.08);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+  .mobile-sticky-cta {
+    max-width: 420px;
     white-space: normal;
     text-align: center;
   }
