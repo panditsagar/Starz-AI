@@ -409,7 +409,7 @@ body {
 .main-headline {
   font-family: "Plus Jakarta Sans", sans-serif;
   margin-top: 1.2rem;
-  font-size: 3rem;
+  font-size: 2.65rem;
   font-weight: 700;
   line-height: 1.25;
   letter-spacing: -1px;
@@ -647,7 +647,7 @@ body {
 }
 
 .btn-large {
-  padding: 18px 46px 18px 48px;
+  padding: 22px 46px 22px 48px;
   font-size: 1.05rem;
   letter-spacing: -0.01em;
 }
@@ -1113,37 +1113,60 @@ body {
   body {
     padding-bottom: calc(96px + env(safe-area-inset-bottom));
   }
+  .hero-bg-wrapper {
+    height: 820px;
+  }
+  .hero-single-center-arch {
+    top: -110px;
+    height: 800px;
+    filter: blur(10px);
+  }
+  .hero-grid-bg {
+    height: 760px;
+    background-size: 36px 36px;
+  }
   .floating-icon-badge {
     display: none;
   }
   .hero-section {
-    padding: 30px 0 25px;
+    padding: 22px 0 28px;
+    overflow: hidden;
+  }
+  .hero-container {
+    padding-inline: 18px;
   }
   .hero-brand {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
   }
   .hero-logo-img {
-    height: 40px;
+    height: 34px;
   }
   .desktop-only {
     display: none;
   }
   .main-headline {
-    font-size: clamp(1.85rem, 5.5vw, 2.4rem);
-    letter-spacing: -0.8px;
+    max-width: 100%;
+    margin-top: 0.8rem;
+    margin-bottom: 16px;
+    font-size: clamp(1.82rem, 7.2vw, 2.32rem);
+    line-height: 1.18;
+    letter-spacing: 0;
   }
   .sub-headline {
-    margin-bottom: 20px;
+    max-width: 34rem;
+    margin-bottom: 18px;
+    font-size: 1rem;
+    line-height: 1.55;
   }
   .hero-cta-wrapper {
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
   .hero-rating-wrapper {
-    gap: 12px;
-    margin-bottom: 28px;
+    gap: 10px;
+    margin-bottom: 22px;
   }
   .rating-doodle-arrow {
-    width: 38px;
+    width: 34px;
   }
   .rating-avatar-img {
     width: 30px;
@@ -1154,12 +1177,25 @@ body {
     font-size: 0.88rem;
   }
   .vsl-container-outer {
+    max-width: 100%;
     margin-bottom: 0;
+  }
+  .vsl-container {
+    border-width: 5px;
+    border-radius: 20px;
+    padding: 6px;
+  }
+  .vsl-border-glow {
+    border-radius: 22px;
+    filter: blur(10px);
+  }
+  .vsl-player-box {
+    border-radius: 14px;
   }
   .btn-large {
     width: auto;
     max-width: 100%;
-    padding: 12px 18px;
+    padding: 16px 18px;
     font-size: 0.88rem;
     white-space: normal;
     text-align: center;
@@ -1184,6 +1220,34 @@ body {
     white-space: normal;
     text-align: center;
   }
+  .industry-marquee-wrapper {
+    margin-top: 32px;
+    gap: 10px;
+  }
+  .marquee-label {
+    max-width: 22rem;
+    font-size: 0.72rem;
+    line-height: 1.45;
+    letter-spacing: 0.06em;
+  }
+  .marquee-container {
+    max-width: calc(100vw - 36px);
+  }
+  .marquee-track,
+  .marquee-group {
+    gap: 10px;
+  }
+  .marquee-pill {
+    gap: 8px;
+    padding: 7px 14px 7px 8px;
+    font-size: 0.82rem;
+  }
+  .pill-icon-box {
+    width: 26px;
+    height: 26px;
+    min-width: 26px;
+    font-size: 0.76rem;
+  }
 }
 
 /* Responsive adjustments for Glassmorphism Pill Badges */
@@ -1205,9 +1269,68 @@ body {
   .hero-pill-badge {
     display: none;
   }
+  .hero-curved-overlay {
+    display: none;
+  }
+  .hero-container {
+    max-width: 760px;
+  }
+  .vsl-container-outer {
+    max-width: 760px;
+  }
 }
 
- 
+@media (min-width: 769px) and (max-width: 900px) {
+  .industry-marquee-wrapper {
+    margin-top: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-container {
+    padding-inline: 14px;
+  }
+  .main-headline {
+    font-size: clamp(1.62rem, 8.2vw, 1.98rem);
+  }
+  .doodle-highlight {
+    padding-inline: 0.12em;
+  }
+  .doodle-circle-svg {
+    top: -18%;
+    left: -6%;
+    width: 112%;
+    height: 158%;
+  }
+  .sub-headline {
+    font-size: 0.94rem;
+  }
+  .hero-cta-wrapper .btn-large {
+    width: 100%;
+  }
+  .hero-rating-wrapper {
+    gap: 6px;
+  }
+  .rating-doodle-arrow {
+    width: 26px;
+  }
+  .rating-stars-row {
+    gap: 6px;
+  }
+  .rating-text {
+    font-size: 0.8rem;
+  }
+  .vsl-container {
+    border-width: 4px;
+    border-radius: 16px;
+    padding: 4px;
+  }
+  .vsl-player-box {
+    border-radius: 11px;
+  }
+}
+
+
 .prob-intro {
   margin-bottom: 36px;
 }
@@ -1403,18 +1526,135 @@ body {
 
 /* Responsive Rules */
 @media (max-width: 992px) {
+  .prob-sol-section {
+    padding: 36px 0 30px;
+  }
+  .prob-sol-section .section-header {
+    margin-bottom: 36px;
+  }
+  .transform-subtitle {
+    max-width: 620px;
+    margin-bottom: 34px;
+  }
   .transform-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+  .transform-card {
+    padding: 24px 22px;
   }
 }
 
 @media (max-width: 640px) {
+  .prob-sol-section {
+    padding: 34px 0 28px;
+  }
+  .prob-sol-section .container {
+    padding-inline: 18px;
+  }
+  .prob-sol-section .section-header {
+    margin-bottom: 28px;
+  }
+  .prob-sol-section .section-title {
+    font-size: clamp(1.72rem, 7vw, 2.08rem);
+    line-height: 1.18;
+    letter-spacing: 0;
+  }
+  .transform-subtitle {
+    max-width: 100%;
+    margin-bottom: 28px;
+    font-size: 0.96rem;
+    line-height: 1.58;
+  }
   .transform-grid {
     grid-template-columns: 1fr;
     gap: 16px;
+    margin-bottom: 32px;
   }
   .transform-card {
+    display: flex;
+    width: 100%;
+    max-width: 380px;
+    margin-inline: auto;
+    min-height: 300px;
+    background: #ffffff;
     padding: 20px 18px;
+    gap: 14px;
+    border-radius: 14px;
+    box-shadow: 0 10px 26px rgba(15, 23, 42, 0.06);
+  }
+  .card-friction-part {
+    gap: 10px;
+  }
+  .friction-header {
+    gap: 9px;
+  }
+  .friction-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 1.2rem;
+  }
+  .friction-label {
+    font-size: 0.72rem;
+    line-height: 1.25;
+  }
+  .friction-text {
+    font-size: 0.9rem;
+    line-height: 1.48;
+  }
+  .bridge-chip {
+    padding: 4px 12px;
+    font-size: 0.68rem;
+    letter-spacing: 0.45px;
+  }
+  .card-fix-part {
+    padding: 16px 17px;
+    border-radius: 9px;
+  }
+  .fix-title {
+    font-size: 1rem;
+  }
+  .fix-desc {
+    font-size: 0.86rem;
+    line-height: 1.46;
+  }
+  .prob-sol-cta {
+    margin-top: 4px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  .prob-sol-section .container {
+    padding-inline: 14px;
+  }
+  .prob-sol-section .section-title {
+    font-size: clamp(1.52rem, 8vw, 1.86rem);
+  }
+  .transform-subtitle {
+    font-size: 0.9rem;
+  }
+  .transform-grid {
+    gap: 14px;
+  }
+  .transform-card {
+    max-width: 340px;
+    min-height: 315px;
+    padding: 18px 16px;
+  }
+
+  .friction-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 1.12rem;
+  }
+  .bridge-chip {
+    width: fit-content;
+    max-width: 100%;
+    white-space: normal;
+  }
+  .prob-sol-cta .btn-large {
+    width: 100%;
   }
 }
 
